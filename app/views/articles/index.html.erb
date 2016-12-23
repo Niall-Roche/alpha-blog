@@ -1,12 +1,22 @@
-<h1>Showing all blog posts</h1>
+<div class="container">
+    <h1 align="center">All Posts</h1>
 
-<% @articles.each do |article| %>
-<article class="article">
-    <h3><%= article.title %></h3>
-    <p><%= article.description %></p>
-    <span><%= link_to "Show", article %></span>
-    <span><%= link_to "Edit", edit_article_path(article) %></span>
-    <span><%= link_to "Remove", article, method: :delete, data: { confirm: "Are you sure?" } %></span>
-</article>
-    <br/>
-<% end %>
+    <% @articles.each do |article| %>
+    <article class="article">
+        <div class="panel panel-info">
+            <div class="panel-heading text-center">
+                <strong><%= article.title %></strong>
+            </div>
+            <div class="panel-body">
+                <%= article.description %>
+            </div>
+            <div class="panel-footer">
+                <span><%= link_to "Show", article, class: "btn btn-md btn-info" %></span>
+                <span><%= link_to "Edit", edit_article_path(article) , class: "btn btn-md btn-primary" %></span>
+                <span><%= link_to "Remove", article, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-md btn-danger" %></span>
+            </div>
+        </div>
+    </article>
+        <br/>
+    <% end %>
+</div>
