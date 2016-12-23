@@ -1,13 +1,17 @@
-$navbar-default-bg: #425659;
+$navbar-default-bg: #F4F4F4;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+    margin-top: 45px;
+}
 
 .navbar {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    margin-bottom: 0;
+    border: none;
 }
 
 .block-text {
