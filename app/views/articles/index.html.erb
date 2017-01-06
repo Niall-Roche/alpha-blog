@@ -18,7 +18,7 @@
                     <div class="article-creator">
                         <small>
                             <p>created by <%= article.user.username %> <%=time_ago_in_words(article.created_at)%> ago</p>
-                            <p>last updated <%= time_ago_in_words(article.created_at) %> ago</p>
+                            <p>last updated <%= time_ago_in_words(article.created_atei) %> ago</p>
                         </small>
                     </div>
                 <% end %>
