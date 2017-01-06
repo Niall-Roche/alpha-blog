@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
    end
    
    def new
-      @article = Article.new 
+      @article = Article.new
    end
    
    def edit
@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
    
    def create
       @article = Article.new(article_params)
+      @article.user = User.first
       if @article.save
         flash[:success] = "Article Saved!"
         redirect_to article_path(@article)
